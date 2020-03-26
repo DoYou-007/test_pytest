@@ -1,9 +1,9 @@
 #某些场景需要登录，某些则不需要
 import pytest
 
-@pytest.fixture()
-def login():
-    print("这是个登录的方法")
+# @pytest.fixture()
+# def login():
+#     print("这是个登录的方法")
 
 def  test_case1(login):
     print("test_case1需要登录")

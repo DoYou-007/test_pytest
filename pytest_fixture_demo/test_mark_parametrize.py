@@ -37,3 +37,17 @@ def test_login1(login_r):
     a = login_r
     print(f"测试用例中login的返回值；{a}")
     assert a != ""
+
+
+# 测试xfail失败的情况：前提是用例失败，运行时发现错误而忽略它；ignore掉的是结果，不是执行的过程
+class TestXfial:
+
+    def testone(self):
+        assert 1 == 0
+
+    @pytest.mark.xfail
+    def testtwo(self):
+        assert 1 == 0
+
+    def testthrid(self):
+        assert 1 == 0

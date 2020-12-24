@@ -3,6 +3,7 @@ values_add:
   - [0,23,23]
   - [-2,-3,-5]
   - ['Ho',"lo","Holo"]
+  - ['ni',3,'error']
 
 values_div:
   - [0,3,0]

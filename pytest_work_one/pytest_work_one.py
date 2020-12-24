@@ -37,21 +37,27 @@ class TestCalc:
     """
     a,b的值可能是：整数，零，负数，特殊字符，中文
     """
-    @pytest.mark.parametrize("a,b,expect",value['values_add'])
-    def test_add(self,a,b,expect):
+    @pytest.mark.parametrize("a,b,expecter",value['values_add'])
+    def test_add(self,a,b,expecter):
         #调用calculator中的add方法，将结果保存到result中
-        result = self.calc.add(a,b)
-        print(result)
-        #将结果和预期值进行对比
-        assert result == expect
+        try:
+            result = self.calc.add(a,b)
+            print(result)
+            #将结果和预期值进行对比
+            assert result == expecter
+        except TypeError:
+            print('这是a,b值不是整数类型的case')
 
-    @pytest.mark.parametrize("a,b,expect",value['values_div'])
-    def test_div(self,a,b,expect):
+    @pytest.mark.parametrize("a,b,expecter",value['values_div'])
+    def test_div(self,a,b,expecter):
         # 调用calculator中的div方法，将结果保存到result中
-        result = self.calc.add(a, b)
-        print(result)
-        # 将结果和预期值进行对比
-        assert result == expect
+        try:
+            result = self.calc.div(a, b)
+            print(result)
+            # 将结果和预期值进行对比
+            assert result == expecter
+        except ZeroDivisionError:
+            print('这是当除数为零的case')
 
 if __name__ == "__main__":
     pytest.main('-v -s ')

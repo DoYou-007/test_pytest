@@ -1,0 +1,1 @@
+{"uuid": "a8d7eddb-7769-4c97-92df-de88d5498b7b", "children": ["7aff7587-7187-402a-ab0b-b3272238b8f8"], "befores": [{"name": "print_news", "status": "passed", "start": 1615047822402, "stop": 1615047822402}], "afters": [{"name": "print_news::0", "status": "passed", "start": 1615047822404, "stop": 1615047822404}], "start": 1615047822402, "stop": 1615047822404}

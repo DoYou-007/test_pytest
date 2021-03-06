@@ -28,4 +28,5 @@ def test_login2():
 
 
 if __name__ == "__main__":
-    pytest.main("-v -s")
+    # pytest.main("-v -s")
+    pytest.mark(['test_mark_selfdefind.py','-m','search'])
